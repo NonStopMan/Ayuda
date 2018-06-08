@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ayuda-web:
+    image: ${DOCKER_REGISTRY}ayudaweb
+    build:
+      context: .
+      dockerfile: Ayuda-Web\Dockerfile
