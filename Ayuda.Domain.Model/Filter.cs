@@ -1,4 +1,4 @@
-﻿namespace Ayuda.Web
+﻿namespace Ayuda.Domian.Model
 {
     public class Filter
     {
