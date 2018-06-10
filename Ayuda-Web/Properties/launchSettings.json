@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Ayuda_Web": {
+    "Ayuda.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

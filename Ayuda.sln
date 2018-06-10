@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ayuda-Web", "Ayuda-Web\Ayuda-Web.csproj", "{CE6D2BFF-4F7E-4D96-954A-26E7B09E2697}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ayuda.Web", "Ayuda-Web\Ayuda.Web.csproj", "{CE6D2BFF-4F7E-4D96-954A-26E7B09E2697}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CD627E78-A5B6-442D-B817-0C492DA6CB3B}"
 EndProject
