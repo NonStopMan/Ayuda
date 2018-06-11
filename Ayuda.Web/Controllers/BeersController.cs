@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Threading.Tasks;
+using Ayuda.Domain.Handlers.Beer;
 using Ayuda.Domain.Interface;
 using Ayuda.Domain.Model;
 using Ayuda.Domian.Model;
@@ -16,22 +17,21 @@ namespace Ayuda.Web.Controllers
 {
     [Route("api/[controller]")]
 
-    [EnableCors(policyName: "AyudaAPIService")]
     public class BeersController : Controller
     {
         //private readonly string pathToFilter = @"http://api.brewerydb.com/v2/beers?key=d905bda1503354da3820dc22ba49ad69&p={0}&name={1}&isOrganic={2}&hasLabels={3}&year={4}
         //                                &status={5}&ids={6}&sort={6}&order={7}";
         //private readonly string path = @"http://api.brewerydb.com/v2/beers?key=d905bda1503354da3820dc22ba49ad69&p={0}&sort={1}&order={2}";
-        public IBeerRepository _beerRepository { get; set; }
-        public BeersController(IBeerRepository beerRepository)
+        private readonly Lazy<GetBeers> _getBeers;
+        public BeersController(Lazy<GetBeers> getBeers)
         {
-            _beerRepository = beerRepository;
+            _getBeers = getBeers;
         }
         // GET: api/<controller>
         [HttpPost]
         public async Task<BeerServiceResponse> GetWithFilter([FromBody]Filter filter)
         {
-            return await _beerRepository.GetBeers(filter);
+            return await _getBeers.Value.Execute(filter);
         }
     }
 }

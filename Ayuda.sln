@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ayuda.Domain.Model", "Ayuda.Domain.Model\Ayuda.Domain.Model.csproj", "{F61D56A2-261F-46ED-AF50-BEA3998C131F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ayuda.Domain.Model", "Ayuda.Domain.Model\Ayuda.Domain.Model.csproj", "{F61D56A2-261F-46ED-AF50-BEA3998C131F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ayuda.Domain", "Ayuda.Domain\Ayuda.Domain.csproj", "{83983866-C3A7-4758-8374-ECBAFFCE1B1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ayuda.Web", "Ayuda.Web\Ayuda.Web.csproj", "{38462401-08A6-4FF4-A210-BBC88BDCB9B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ayuda.Web", "Ayuda.Web\Ayuda.Web.csproj", "{38462401-08A6-4FF4-A210-BBC88BDCB9B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ayuda.Web.Test", "Ayuda.Domain.Test\Ayuda.Web.Test.csproj", "{A7D7D195-11C1-439C-8CE8-6F5451997326}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ayuda.Domain.Test", "Ayuda.Domain.Test\Ayuda.Domain.Test.csproj", "{A7D7D195-11C1-439C-8CE8-6F5451997326}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C68B0F32-CA93-470F-9CC8-3D5B5955CE50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7764ECCD-3D3B-4409-8CEB-5A7610A51408}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{91510D28-A08F-4FE9-A1DC-6506E46AF709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +42,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F61D56A2-261F-46ED-AF50-BEA3998C131F} = {C68B0F32-CA93-470F-9CC8-3D5B5955CE50}
+		{83983866-C3A7-4758-8374-ECBAFFCE1B1E} = {C68B0F32-CA93-470F-9CC8-3D5B5955CE50}
+		{38462401-08A6-4FF4-A210-BBC88BDCB9B2} = {91510D28-A08F-4FE9-A1DC-6506E46AF709}
+		{A7D7D195-11C1-439C-8CE8-6F5451997326} = {7764ECCD-3D3B-4409-8CEB-5A7610A51408}
+		{7764ECCD-3D3B-4409-8CEB-5A7610A51408} = {C68B0F32-CA93-470F-9CC8-3D5B5955CE50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4595BDFC-E160-430A-8551-0ECB33E9982E}

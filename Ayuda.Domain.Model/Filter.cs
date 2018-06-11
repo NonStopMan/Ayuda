@@ -2,7 +2,7 @@
 {
     public class Filter
     {
-        public int? Page { get; set; }
+        public int Page { get; set; }
         public string Name { get; set; }
         public string IsOrganic { get; set; }
         public string HasLabels { get; set; }

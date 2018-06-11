@@ -1,5 +1,5 @@
 import axios from 'axios';
-const ROOT_URL = 'http://localhost:57476/';
+const ROOT_URL = './';
 export const FETCH_BEERS = 'FETCH_BEERS';
 export const READ_BEER = 'READ_BEER';
 

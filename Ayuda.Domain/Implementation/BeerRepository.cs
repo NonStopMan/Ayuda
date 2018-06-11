@@ -10,8 +10,7 @@ namespace Ayuda.Domain.Implementation
 {
     public class BeerRepository : IBeerRepository
     {
-        private readonly string pathToFilter = @"http://api.brewerydb.com/v2/beers?key=d905bda1503354da3820dc22ba49ad69&p={0}&name={1}&isOrganic={2}&hasLabels={3}&year={4}
-                                        &status={5}&ids={6}&sort={6}&order={7}";
+        private readonly string pathToFilter = @"http://api.brewerydb.com/v2/beers?key=d905bda1503354da3820dc22ba49ad69&p={0}&name={1}&isOrganic={2}&hasLabels={3}&year={4}&status={5}&ids={6}&sort={6}&order={7}";
         private readonly string path = @"http://api.brewerydb.com/v2/beers?key=d905bda1503354da3820dc22ba49ad69&p={0}&sort={1}&order={2}";
         public async Task<BeerServiceResponse> GetBeers(Filter filter)
         {
@@ -20,7 +19,7 @@ namespace Ayuda.Domain.Implementation
             if (filter.FilterBeers)
             {
                 fullUri = string.Format(pathToFilter, filter.Page, filter.Name, filter.IsOrganic,
-                    filter.HasLabels, filter.Year, filter.Status, filter.Ids, filter.Sort.ToUpper(), filter.Order);
+                    filter.HasLabels, filter.Year, filter.Status, filter.Ids, filter.Sort?.ToUpper(), filter.Order);
             }
             else
             {

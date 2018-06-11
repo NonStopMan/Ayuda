@@ -36,7 +36,6 @@ class App extends Component {
     console.log(dataFromChild);
   };
   updateSearchModel(searchModel) {
-    debugger;
     console.log(searchModel);
     this.props.getBeers(searchModel);
   }

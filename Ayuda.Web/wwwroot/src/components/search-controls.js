@@ -6,11 +6,11 @@ export default class SeachForm extends React.Component {
         super(props);
         this.state = {
             name: '',
-            status: '',
+            status: 'verified',
             year: '',
             isOrganic: '',
             hasLabels: '',
-            FilterBeers: false
+            FilterBeers: true
         }
     }
     handleNameChange(event) {
@@ -35,7 +35,6 @@ export default class SeachForm extends React.Component {
         this.setState({ isOrganic: 'N' });
     }
     Search() {
-        this.setState({FilterBeers: true})
         this.props.updateSearchModel(this.state);
     }
     render() {

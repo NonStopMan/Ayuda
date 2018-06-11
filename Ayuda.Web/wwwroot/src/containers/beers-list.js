@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'reactstrap';
+import { Card, Alert } from 'reactstrap';
 import {
     DataTypeProvider, SortingState, IntegratedSorting
 } from '@devexpress/dx-react-grid';
@@ -48,7 +48,7 @@ class BeersList extends Component {
             page: 0,
             sorting: [
                 {
-                    columnName: 'id',
+                    columnName: 'name',
                     direction: 'asc'
                 }
             ],
@@ -109,12 +109,20 @@ class BeersList extends Component {
             imageColumns: ['labels']
         }
         this.changeSorting = sorting => {
-            if (sorting[0].columnName === 'id' || sorting[0].columnName === 'year') return;
+            console.log(sorting[0].columnName);
+            if (sorting[0].columnName === 'id' || sorting[0].columnName === 'year'
+                || sorting[0].columnName === 'labels') return;
             var addtoFilterColumn = '';
             if (sorting[0].columnName !== 'name') addtoFilterColumn = 'Id';
             this.gridOptions.sorting = sorting
-            this.gridOptions.sort = sorting[0].direction;
-            this.gridOptions.order = sorting[0].columnName + addtoFilterColumn;
+            if (sorting[0].columnName === 'statusDisplay') {
+                this.gridOptions.sort = sorting[0].direction;
+                this.gridOptions.order = 'status';
+            }
+            else {
+                this.gridOptions.sort = sorting[0].direction;
+                this.gridOptions.order = sorting[0].columnName + addtoFilterColumn;
+            }
             this.props.updateGridOptions(this.gridOptions);
         }
         this.changeCurrentPage = currentPage => {
@@ -170,7 +178,15 @@ class BeersList extends Component {
                 </Container>
             );
         } else {
-            return null;
+            return (
+                <Container>
+                    <Card>
+                        <Alert color="danger">
+                            No Records to show
+              </Alert>
+                    </Card>
+                </Container>
+            );
         }
     }
 }

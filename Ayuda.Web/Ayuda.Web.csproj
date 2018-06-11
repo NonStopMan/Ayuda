@@ -5,6 +5,43 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\build\asset-manifest.json" />
+    <Content Include="wwwroot\build\favicon.ico" />
+    <Content Include="wwwroot\build\index.html" />
+    <Content Include="wwwroot\build\manifest.json" />
+    <Content Include="wwwroot\build\service-worker.js" />
+    <Content Include="wwwroot\build\static\css\main.f5420b23.css" />
+    <Content Include="wwwroot\build\static\css\main.f5420b23.css.map" />
+    <Content Include="wwwroot\build\static\media\top-9-beers-in-iceland-1.5f03bcaa.jpg" />
+    <Content Include="wwwroot\build\style.css" />
+    <Content Include="wwwroot\build\top-9-beers-in-iceland-1.jpg" />
+    <Content Include="wwwroot\build\types-of-beer-header.jpg" />
+    <Content Include="wwwroot\public\favicon.ico" />
+    <Content Include="wwwroot\public\index.html" />
+    <Content Include="wwwroot\public\manifest.json" />
+    <Content Include="wwwroot\public\style.css" />
+    <Content Include="wwwroot\public\top-9-beers-in-iceland-1.jpg" />
+    <Content Include="wwwroot\public\types-of-beer-header.jpg" />
+    <Content Include="wwwroot\src\actions\index.js" />
+    <Content Include="wwwroot\src\App.css" />
+    <Content Include="wwwroot\src\App.test.js" />
+    <Content Include="wwwroot\src\components\app.js" />
+    <Content Include="wwwroot\src\components\search-controls.js" />
+    <Content Include="wwwroot\src\containers\beer-details.js" />
+    <Content Include="wwwroot\src\containers\beers-list.js" />
+    <Content Include="wwwroot\src\controls\searchTags-box.js" />
+    <Content Include="wwwroot\src\images\icon.jpg" />
+    <Content Include="wwwroot\src\images\top-9-beers-in-iceland-1.jpg" />
+    <Content Include="wwwroot\src\images\types-of-beer-header.jpg" />
+    <Content Include="wwwroot\src\index.css" />
+    <Content Include="wwwroot\src\index.js" />
+    <Content Include="wwwroot\src\logo.svg" />
+    <Content Include="wwwroot\src\reducers\beers-reducer.js" />
+    <Content Include="wwwroot\src\reducers\index.js" />
+    <Content Include="wwwroot\src\registerServiceWorker.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
   </ItemGroup>
 
@@ -19,6 +56,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Ayuda.Domain.Model\Ayuda.Domain.Model.csproj" />
     <ProjectReference Include="..\Ayuda.Domain\Ayuda.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\build\static\js\" />
   </ItemGroup>
 
 </Project>
